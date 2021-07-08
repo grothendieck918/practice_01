@@ -19,6 +19,11 @@
 
     <div style="margin:2rem 0; text-align: center;">
         <h1>METHOD</h1>
+
+        <form action="/accounts/hello_world/" method="post">
+            {% csrf_token %}
+            <input type="submit" class = "py-5 btn btn-success rounded-pill">
+        </form>
         <h3>{{ text }}</h3>
 
     </div>
