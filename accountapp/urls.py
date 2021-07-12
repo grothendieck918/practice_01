@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from accountapp.views import hello_world
+from accountapp.views import hello_world, AccountCreateView
 
 app_name = 'accountapp'
 
 urlpatterns = [
-    path('hello_world/', hello_world, name='hello_world')
+    path('hello_world/', hello_world, name='hello_world'),  # 두번째 인자는 함수
+    
+    path('create/', AccountCreateView.as_view(), name='create')  # 두번째인자가 클래스이므로 as_view()를써서 함수처럼
 
 ]
