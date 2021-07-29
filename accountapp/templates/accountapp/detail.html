@@ -21,17 +21,16 @@
             {% endif %}
         </div>
 
-        <div>
-            {{ target_user.date_joined }}
-        </div>
+{#        <div>#}
+{#            {{ target_user.date_joined }}#}
+{#        </div>#}
 
         {% if user == target_user %}
         <div>
-            <p>
-                <a href={% url 'accountapp:update' pk=user.pk %}>Update info</a>
+            <a href="{% url 'accountapp:update' pk=user.pk %}" class="material-icons round_button mx-1">settings</a>
 {#                        여기선이젠 나의 pk#}
-            </p>
-            <div><a href={% url 'accountapp:delete' pk=user.pk %}> Quit </a></div>
+
+            <a href="{% url 'accountapp:delete' pk=user.pk %}" class="material-icons round_button mx-1">close</a>
         </div>
         {% endif %}
     </div>
