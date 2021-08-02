@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div>
+            <h1>{{ target_article.title }}</h1>
+            <h4>{{ target_article.writer.profile.nickname }}</h4>
+            <h4>{{ target_article.created_at }}</h4>
+        </div>
+
+        <div>
+            <img src="{{ target_article.image.url }}" alt="">
+            <h4>{{ target_article.content }}</h4>
+        </div>
+
+
+
+    </div>
+{% endblock %}
