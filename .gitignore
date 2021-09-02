@@ -84,3 +84,6 @@ __pycache__/
 media/
 
 staticfiles/
+
+kkc_gcp
+kkc_gcp.pub
